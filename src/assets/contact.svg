@@ -1,0 +1,8 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="g" x1="120" y1="420" x2="1080" y2="80" gradientUnits="userSpaceOnUse"><stop stop-color="#9A7CFF"/><stop offset="1" stop-color="#55E7FF"/></linearGradient><filter id="b"><feGaussianBlur stdDeviation="45"/></filter></defs>
+<circle cx="820" cy="240" r="180" fill="#8B6CFF" fill-opacity=".12" filter="url(#b)"/>
+<path d="M70 380C230 90 330 470 500 230C650 20 710 420 850 190C960 10 1030 220 1130 100" stroke="url(#g)" stroke-width="2" stroke-opacity=".7"/>
+<path d="M70 410C260 120 350 500 530 260C670 70 750 450 900 220C990 80 1050 260 1130 150" stroke="#fff" stroke-opacity=".08"/>
+<g fill="#0C0916" stroke="url(#g)" stroke-width="3"><circle cx="70" cy="380" r="13"/><circle cx="500" cy="230" r="13"/><circle cx="850" cy="190" r="13"/><circle cx="1130" cy="100" r="13"/></g>
+<text x="70" y="85" fill="#fff" font-family="Arial" font-size="31" font-weight="700">LET'S BUILD SOMETHING</text><text x="70" y="115" fill="#9E93BD" font-family="monospace" font-size="12">ONE PROJECT · ONE CONNECTION · ONE STEP FORWARD</text>
+</svg>

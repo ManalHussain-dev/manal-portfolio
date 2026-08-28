@@ -1,0 +1,10 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="g" x1="120" y1="100" x2="780" y2="620" gradientUnits="userSpaceOnUse"><stop stop-color="#9A7CFF"/><stop offset="1" stop-color="#55E7FF"/></linearGradient><filter id="b"><feGaussianBlur stdDeviation="36"/></filter></defs>
+<circle cx="450" cy="350" r="190" fill="#765BFF" fill-opacity=".1" filter="url(#b)"/>
+<circle cx="450" cy="350" r="220" stroke="#9A7CFF" stroke-opacity=".18" stroke-width="2" stroke-dasharray="8 12"/><circle cx="450" cy="350" r="145" stroke="#55E7FF" stroke-opacity=".16" stroke-width="2" stroke-dasharray="4 14"/>
+<circle cx="450" cy="350" r="92" fill="#0C0916" stroke="url(#g)" stroke-width="3"/>
+<text x="450" y="342" text-anchor="middle" fill="#fff" font-family="Arial" font-size="25" font-weight="700">FULL</text><text x="450" y="372" text-anchor="middle" fill="#9E93BD" font-family="monospace" font-size="13">STACK TOOLKIT</text>
+<g fill="#0D0A17" stroke="#9A7CFF" stroke-opacity=".45"><rect x="390" y="72" width="120" height="44" rx="22"/><rect x="676" y="328" width="140" height="44" rx="22"/><rect x="84" y="328" width="140" height="44" rx="22"/><rect x="390" y="584" width="120" height="44" rx="22"/></g>
+<g fill="#EDE8FF" font-family="monospace" font-size="13" text-anchor="middle"><text x="450" y="100">REACT</text><text x="746" y="356">NODE.JS</text><text x="154" y="356">JAVA</text><text x="450" y="612">MONGODB</text></g>
+<path d="M450 116V258M676 350H542M358 350H224M450 442V584" stroke="url(#g)" stroke-opacity=".45" stroke-width="2"/>
+</svg>

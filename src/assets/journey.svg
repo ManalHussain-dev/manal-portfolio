@@ -1,0 +1,8 @@
+<svg width="1000" height="520" viewBox="0 0 1000 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="g" x1="100" y1="250" x2="900" y2="250" gradientUnits="userSpaceOnUse"><stop stop-color="#9A7CFF"/><stop offset="1" stop-color="#55E7FF"/></linearGradient></defs>
+<rect x="35" y="35" width="930" height="450" rx="34" fill="#0C0916" stroke="#9A7CFF" stroke-opacity=".14"/>
+<path d="M120 340C210 160 300 380 405 250C520 110 585 360 690 220C775 105 820 250 880 150" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/>
+<g fill="#0C0916" stroke="url(#g)" stroke-width="3"><circle cx="120" cy="340" r="16"/><circle cx="300" cy="320" r="16"/><circle cx="405" cy="250" r="16"/><circle cx="690" cy="220" r="16"/><circle cx="880" cy="150" r="16"/></g>
+<g fill="#fff" font-family="Arial" font-size="18" font-weight="700"><text x="85" y="400">LEARN</text><text x="270" y="380">BUILD</text><text x="380" y="205">DEBUG</text><text x="660" y="175">IMPROVE</text><text x="850" y="115">GROW</text></g>
+<text x="85" y="95" fill="#9E93BD" font-family="monospace" font-size="12" letter-spacing="3">THE LOOP NEVER STOPS</text>
+</svg>

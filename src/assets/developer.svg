@@ -1,0 +1,85 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skin" x1="390" y1="160" x2="560" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD7C2"/><stop offset="1" stop-color="#C58B87"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="360" y1="120" x2="590" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#241B3F"/><stop offset="0.5" stop-color="#4B2A70"/><stop offset="1" stop-color="#120F25"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="350" y1="380" x2="650" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4D3BC4"/><stop offset="1" stop-color="#17122F"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="250" y1="500" x2="700" y2="710" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A98CFF"/><stop offset="0.45" stop-color="#5D5BFF"/><stop offset="1" stop-color="#12D9FF"/>
+    </linearGradient>
+    <filter id="blur" x="-100" y="-100" width="1100" height="1100" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+    <filter id="shadow" x="130" y="340" width="690" height="470" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="25" stdDeviation="30" flood-color="#05020D" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <circle cx="470" cy="430" r="280" fill="#765BFF" fill-opacity="0.13" filter="url(#blur)"/>
+  <circle cx="650" cy="250" r="95" fill="#12D9FF" fill-opacity="0.1" filter="url(#blur)"/>
+
+  <!-- floating rings -->
+  <ellipse cx="470" cy="445" rx="330" ry="150" stroke="#9C8CFF" stroke-opacity="0.18" stroke-width="2" transform="rotate(-14 470 445)"/>
+  <ellipse cx="470" cy="445" rx="285" ry="118" stroke="#4FE6FF" stroke-opacity="0.14" stroke-width="1.5" transform="rotate(20 470 445)"/>
+
+  <!-- hair behind -->
+  <path d="M355 277C340 185 401 111 488 115C578 119 624 186 605 293L580 367L361 354L355 277Z" fill="url(#hair)"/>
+  <path d="M370 205C401 141 505 121 567 171C523 158 480 174 444 205C413 231 392 274 388 324L355 304L370 205Z" fill="#100C20" fill-opacity="0.8"/>
+
+  <!-- face -->
+  <path d="M395 217C413 173 492 158 548 193C585 216 589 270 572 316C555 363 511 392 463 379C418 366 385 319 387 273C388 252 390 235 395 217Z" fill="url(#skin)"/>
+  <!-- hair fringe -->
+  <path d="M388 250C382 201 427 164 486 164C535 164 567 188 582 225C548 213 524 210 501 218C471 228 445 247 423 275C410 290 394 285 388 250Z" fill="url(#hair)"/>
+  <!-- face details -->
+  <path d="M430 282C440 276 451 276 460 282" stroke="#5E3E55" stroke-width="6" stroke-linecap="round"/>
+  <path d="M501 282C511 276 522 276 531 282" stroke="#5E3E55" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="447" cy="286" r="4" fill="#22162A"/><circle cx="518" cy="286" r="4" fill="#22162A"/>
+  <path d="M470 326C483 334 499 334 511 324" stroke="#9B5D6C" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- body -->
+  <path d="M370 389C401 369 435 359 472 359C520 359 560 374 593 401L649 567L316 567L370 389Z" fill="url(#shirt)"/>
+  <path d="M391 398C421 427 451 440 485 440C523 440 554 424 579 401" stroke="#B7A8FF" stroke-opacity="0.25" stroke-width="5"/>
+
+  <!-- arms -->
+  <path d="M362 410C332 439 304 485 283 528L330 550C362 512 393 473 419 445L362 410Z" fill="url(#skin)"/>
+  <path d="M585 410C624 440 656 476 684 520L637 551C609 511 578 475 551 447L585 410Z" fill="url(#skin)"/>
+
+  <!-- laptop shadow -->
+  <ellipse cx="491" cy="682" rx="310" ry="70" fill="#000" fill-opacity="0.42" filter="url(#blur)"/>
+
+  <!-- laptop -->
+  <g filter="url(#shadow)">
+    <path d="M275 476C279 456 294 445 315 445H666C687 445 702 456 706 476L735 654H246L275 476Z" fill="#11101B" stroke="#7E74A8" stroke-opacity="0.65" stroke-width="3"/>
+    <rect x="300" y="470" width="351" height="155" rx="9" fill="#080913" stroke="#6E63B6" stroke-opacity="0.5"/>
+    <rect x="316" y="486" width="319" height="123" rx="6" fill="url(#screen)" fill-opacity="0.12"/>
+    <path d="M335 518H446" stroke="#A98CFF" stroke-width="7" stroke-linecap="round"/>
+    <path d="M335 541H535" stroke="#5FE6FF" stroke-opacity="0.75" stroke-width="6" stroke-linecap="round"/>
+    <path d="M335 564H475" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="5" stroke-linecap="round"/>
+    <path d="M510 585L546 550L579 578" stroke="#A98CFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M230 654H750L702 690H277L230 654Z" fill="#1A1827" stroke="#8278B8" stroke-opacity="0.55" stroke-width="3"/>
+    <path d="M434 663H547" stroke="#8D83B9" stroke-opacity="0.45" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- hands on laptop -->
+  <path d="M341 519C356 506 374 505 391 516L422 542L399 564L365 548L334 541C325 535 329 526 341 519Z" fill="url(#skin)"/>
+  <path d="M622 520C607 507 590 506 573 517L542 542L564 564L598 548L629 541C638 535 634 526 622 520Z" fill="url(#skin)"/>
+
+  <!-- floating code labels -->
+  <g font-family="monospace" font-size="18" fill="#D9D4FF">
+    <rect x="106" y="334" width="142" height="48" rx="24" fill="#0C0A16" stroke="#8D7DFF" stroke-opacity="0.35"/>
+    <text x="133" y="365">&lt;React /&gt;</text>
+    <rect x="672" y="350" width="125" height="48" rx="24" fill="#0C0A16" stroke="#50DFFF" stroke-opacity="0.35"/>
+    <text x="701" y="381">Node.js</text>
+    <rect x="708" y="520" width="110" height="48" rx="24" fill="#0C0A16" stroke="#8D7DFF" stroke-opacity="0.35"/>
+    <text x="740" y="551">Java</text>
+  </g>
+
+  <circle cx="162" cy="430" r="6" fill="#8D7DFF"/>
+  <circle cx="744" cy="446" r="5" fill="#50DFFF"/>
+  <circle cx="685" cy="154" r="7" fill="#8D7DFF"/>
+</svg>
