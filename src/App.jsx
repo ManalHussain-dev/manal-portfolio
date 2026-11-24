@@ -1,14 +1,12 @@
 import { motion, useScroll, useSpring } from "motion/react";
-
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
-import Education from "./sections/Education";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Journey from "./sections/Journey";
-import Goals from "./sections/Goals";
 import Contact from "./sections/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -20,36 +18,35 @@ function App() {
   });
 
   return (
-    <div className="site-shell">
-      {/* Global scroll progress */}
+    <div className="relative min-h-screen bg-[#050508] text-[#f3f4f6]">
+      {/* Global Scroll Progress Bar */}
       <motion.div
-        className="scroll-progress"
+        className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-violet-500 via-purple-400 to-cyan-400 origin-left z-50 shadow-[0_0_12px_rgba(139,92,246,0.8)]"
         style={{ scaleX: progress }}
       />
 
-      {/* Ambient background */}
-      <div className="ambient-background">
-        <div className="ambient-orb ambient-orb-one" />
-        <div className="ambient-orb ambient-orb-two" />
-        <div className="ambient-orb ambient-orb-three" />
+      {/* Atmospheric Ambient Glowing Orbs */}
+      <div className="ambient-container">
+        <div className="ambient-orb orb-primary" />
+        <div className="ambient-orb orb-secondary" />
+        <div className="ambient-orb orb-tertiary" />
       </div>
 
+      {/* Navigation */}
       <Navbar />
 
+      {/* Main Sections */}
       <main>
         <Hero />
         <About />
-        <Education />
         <Skills />
         <Projects />
         <Journey />
-        <Goals />
         <Contact />
       </main>
 
-      <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-white/30">
-        © {new Date().getFullYear()} Manal Hussain. Built with React.
-      </footer>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

@@ -1,25 +1,64 @@
 import { motion } from "motion/react";
 import SectionTitle from "../components/SectionTitle";
-import directionVisual from "../assets/direction.svg";
 
 const goals = [
-  ["NOW", "Strengthen full-stack fundamentals", "Keep improving with React, Node.js, Spring Boot, databases and software engineering practices."],
-  ["NEXT", "Gain practical experience", "Prepare for internships and opportunities where I can contribute to real development teams."],
-  ["2028", "Graduate & grow", "Complete my BS Software Engineering and keep growing as a professional full-stack developer."],
+  {
+    label: "NOW",
+    title: "Strengthen full-stack fundamentals",
+    text: "Continue developing with React, Node.js, Spring Boot, databases, and strong software engineering practices.",
+  },
+  {
+    label: "NEXT",
+    title: "Gain practical experience",
+    text: "Prepare for internships and opportunities where I can contribute to real development teams.",
+  },
+  {
+    label: "2028",
+    title: "Graduate & grow",
+    text: "Complete my BS Software Engineering and continue growing as a professional full-stack developer.",
+  },
 ];
 
 function Goals() {
   return (
-    <section id="direction" className="visual-section goals-section">
-      <div className="mx-auto max-w-7xl">
-        <SectionTitle number="06 / DIRECTION" title="Where I'm heading." description="The goal is simple: turn academic knowledge into practical engineering ability." />
-        <div className="section-visual-banner direction-banner"><motion.img src={directionVisual} alt="Career direction and full-stack growth illustration" initial={{ opacity: 0, scale: .96 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: .9 }} /></div>
-        <div className="goal-stage">
-          <div className="goal-big-word">NEXT</div>
-          <div className="goal-cards">{goals.map(([label, title, text], index) => <motion.article key={label} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * .1 }} whileHover={{ y: -7 }}><span>{label}</span><h3>{title}</h3><p>{text}</p><i>0{index + 1} ↗</i></motion.article>)}</div>
+    <section className="section-pad border-y border-white/5">
+      <div className="mx-auto max-w-6xl">
+        <SectionTitle
+          number="06 / DIRECTION"
+          title="Where I'm heading."
+          description="The goal is to turn academic knowledge into practical engineering ability."
+        />
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {goals.map((goal, index) => (
+            <motion.div
+              key={goal.label}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.55,
+                delay: index * 0.08,
+              }}
+              className="rounded-3xl border border-white/10 bg-white/[0.025] p-7"
+            >
+              <span className="font-mono text-xs tracking-[0.2em] text-white/30">
+                {goal.label}
+              </span>
+
+              <h3 className="mt-10 text-xl font-bold">
+                {goal.title}
+              </h3>
+
+              <p className="mt-3 text-sm leading-6 text-white/40">
+                {goal.text}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
+
 export default Goals;

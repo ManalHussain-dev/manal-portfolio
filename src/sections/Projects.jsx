@@ -1,33 +1,62 @@
-import { motion } from "motion/react";
+import { useState } from "react";
 import SectionTitle from "../components/SectionTitle";
 import ProjectCard from "../components/ProjectCard";
-import shopSmart from "../assets/project-shopsmart.jpg";
-import cineReel from "../assets/project-cinereel.jpg";
-import weather from "../assets/project-weather.jpg";
-import deadline from "../assets/project-deadline.jpg";
-
-const projects = [
-  { number: "01", title: "ShopSmart AI", type: "E-COMMERCE", description: "A modern commerce experience with AI assistance, authentication, filtering, cart, wishlist and checkout flows.", technologies: ["React", "TypeScript", "Tailwind", "Node.js", "Gemini AI"], github: "https://github.com/ManalHussain-dev/E-COMMERCE", image: shopSmart, featured: true },
-  { number: "02", title: "CineReel", type: "MOVIE DISCOVERY", description: "A cinema-inspired movie discovery experience with search, trending titles and detailed movie information powered by TMDB.", technologies: ["React", "Vite", "Express", "TMDB API"], github: "https://github.com/ManalHussain-dev/cinereel", image: cineReel },
-  { number: "03", title: "SkyPulse", type: "WEATHER + AI", description: "A rich weather dashboard combining forecasts, air quality, hourly trends, radar information and AI-powered assistance.", technologies: ["React", "TypeScript", "Tailwind", "Express", "AI"], github: "https://github.com/ManalHussain-dev/Weather", image: weather },
-  { number: "04", title: "Deadline Desk", type: "REST API", description: "A backend-focused project exploring authentication, server architecture, environment configuration and MongoDB integration.", technologies: ["Node.js", "Express", "MongoDB", "REST API"], github: "https://github.com/ManalHussain-dev/Dead-line-Desk", image: deadline },
-];
+import ProjectModal from "../components/ProjectModal";
+import { projectsData } from "../data/projectsData";
+import { FolderGit2 } from "lucide-react";
 
 function Projects() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
-    <section id="projects" className="visual-section projects-section">
-      <div className="project-backdrop" />
+    <section id="projects" className="section-pad border-t border-white/[0.05] relative">
       <div className="mx-auto max-w-7xl">
-        <div className="projects-topline">
-          <span>04 / SELECTED WORK</span>
-          <motion.span animate={{ opacity: [0.3, 1, 0.3] }} transition={{ duration: 2.4, repeat: Infinity }}>● LIVE ARCHIVE</motion.span>
+        <SectionTitle
+          number="03 / FEATURED PROJECTS"
+          title="Engineered solutions & systems."
+          description="A curated showcase of applications highlighting full-stack development, multi-protocol API integrations, database design, and responsive product interfaces."
+        />
+
+        {/* Project Cards Grid */}
+        <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+          {projectsData.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onSelectProject={(proj) => setSelectedProject(proj)}
+            />
+          ))}
         </div>
-        <SectionTitle number="04 / PROJECTS" title="Software you can actually see." description="A visual collection of projects I've built while turning university concepts and development experiments into working interfaces, APIs and applications." />
-        <div className="project-list">{projects.map((project, index) => <ProjectCard key={project.number} {...project} />)}</div>
-        <motion.div className="projects-footer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: .7 }}>
-          <span>THE CODE CONTINUES</span>
-          <a href="https://github.com/ManalHussain-dev/" target="_blank" rel="noreferrer">VIEW ALL REPOSITORIES <b>↗</b></a>
-        </motion.div>
+
+        {/* Modal Case Study Detail Experience */}
+        <ProjectModal
+          project={selectedProject}
+          isOpen={!!selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+
+        {/* GitHub Footnote */}
+        <div className="mt-14 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-3xl border border-white/[0.07] bg-gradient-to-r from-violet-950/20 via-black to-indigo-950/20 p-6 backdrop-blur-xl">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-600/20 text-violet-400 border border-violet-500/30">
+              <FolderGit2 className="h-5 w-5" />
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-white">Explore More Code on GitHub</h4>
+              <p className="text-xs text-zinc-400">Discover additional experimentations, utilities, and backend repositories.</p>
+            </div>
+          </div>
+
+          <a
+            href="https://github.com/ManalHussain-dev/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-violet-500/40 bg-violet-600/20 px-5 py-2.5 text-xs font-semibold text-violet-200 transition-all hover:bg-violet-600/30 hover:border-violet-400 hover:text-white shrink-0"
+          >
+            <span>Visit @ManalHussain-dev</span>
+            <span className="font-mono">↗</span>
+          </a>
+        </div>
       </div>
     </section>
   );

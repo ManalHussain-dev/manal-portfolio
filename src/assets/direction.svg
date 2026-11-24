@@ -1,9 +1,0 @@
-<svg width="1000" height="560" viewBox="0 0 1000 560" fill="none" xmlns="http://www.w3.org/2000/svg">
-<defs><linearGradient id="g" x1="140" y1="420" x2="850" y2="120" gradientUnits="userSpaceOnUse"><stop stop-color="#9A7CFF"/><stop offset="1" stop-color="#55E7FF"/></linearGradient><filter id="b"><feGaussianBlur stdDeviation="40"/></filter></defs>
-<circle cx="760" cy="180" r="190" fill="#55E7FF" fill-opacity=".08" filter="url(#b)"/>
-<rect x="45" y="45" width="910" height="470" rx="34" fill="#0B0814" stroke="#9A7CFF" stroke-opacity=".15"/>
-<path d="M120 420L290 350L430 390L580 260L730 290L875 135" stroke="url(#g)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M875 135L858 140L867 156" stroke="#55E7FF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-<g fill="#0B0814" stroke="#B6A6FF" stroke-width="3"><circle cx="120" cy="420" r="11"/><circle cx="290" cy="350" r="11"/><circle cx="430" cy="390" r="11"/><circle cx="580" cy="260" r="11"/><circle cx="730" cy="290" r="11"/><circle cx="875" cy="135" r="11"/></g>
-<text x="95" y="100" fill="#fff" font-family="Arial" font-size="28" font-weight="700">NEXT → FULL-STACK</text><text x="95" y="130" fill="#9E93BD" font-family="monospace" font-size="12">ACADEMIC KNOWLEDGE → PRACTICAL ENGINEERING</text>
-</svg>
